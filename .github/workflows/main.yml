@@ -1,3 +1,12 @@
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 jobs:
   build:
     name: cloudmelon test action
@@ -7,4 +16,4 @@ jobs:
       - uses: ./action-a
         with:
           MY_NAME: "cloudmelon"
-#test 
+
